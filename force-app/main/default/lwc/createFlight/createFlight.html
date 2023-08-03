@@ -21,8 +21,8 @@
             <h1>Select the Airports to create a flight between them!</h1>
             <div class="slds-box slds-p-top_small" style="background-color: white;">
                 <lightning-record-edit-form object-api-name="Case" id="arrivalAirport" >
-                    <lightning-input-field field-name="Arrival_Airport__c" variant="label-hidden" onchange={handleArrivalAirport} required> </lightning-input-field>
-                    <lightning-input-field field-name="Departure_Airport__c" variant="label-hidden" onchange={handleDepartureAirport} required> </lightning-input-field>
+                    <lightning-input-field field-name="Arrival_Airport__c"  onchange={handleArrivalAirport} required> </lightning-input-field>
+                    <lightning-input-field field-name="Departure_Airport__c" onchange={handleDepartureAirport} required> </lightning-input-field>
                 </lightning-record-edit-form>
                 <lightning-button variant="brand" label="Insert Flight" onclick={calculateDistance}></lightning-button>
             </div>

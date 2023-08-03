@@ -58,16 +58,8 @@ export default class CreateFlight extends LightningElement {
                         message:'The distance between the Airports is 0KMs change the Arrival or Departure Airport',
                         variant:'error'
                     });
-                }else{
-                    this.toastEvent = new ShowToastEvent({
-                        title:'Error with the Airport!',
-                        message:'There is a problem with the selected Airports, select another Airport and try again',
-                        variant:'error'
-                    });
                 }
-
                 this.dispatchEvent(this.toastEvent);
-
               })
             .catch(error => {
                 console.error('check error here', error);
