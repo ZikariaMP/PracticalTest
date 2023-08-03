@@ -1,0 +1,32 @@
+<template >
+
+    <template lwc:if={flightInsertedBoolean} >
+        <div style="background-color: white;">
+            <h1>Flight created successfully!</h1>
+            <lightning-record-view-form
+                record-id={flightRecordId}
+                object-api-name="Case">
+                <div class="slds-box">
+                    <lightning-output-field field-name="CaseNumber"></lightning-output-field>
+                    <lightning-output-field field-name="Departure_Airport__c"></lightning-output-field>
+                    <lightning-output-field field-name="Arrival_Airport__c"></lightning-output-field>
+                    <lightning-output-field field-name="Distance__c"></lightning-output-field>
+                </div>
+            </lightning-record-view-form>
+        </div>
+    </template>
+
+    <template lwc:else>
+        <div style="background-color: white;">
+            <h1>Select the Airports to create a flight between them!</h1>
+            <div class="slds-box slds-p-top_small" style="background-color: white;">
+                <lightning-record-edit-form object-api-name="Case" id="arrivalAirport" >
+                    <lightning-input-field field-name="Arrival_Airport__c" variant="label-hidden" onchange={handleArrivalAirport} required> </lightning-input-field>
+                    <lightning-input-field field-name="Departure_Airport__c" variant="label-hidden" onchange={handleDepartureAirport} required> </lightning-input-field>
+                </lightning-record-edit-form>
+                <lightning-button variant="brand" label="Insert Flight" onclick={calculateDistance}></lightning-button>
+            </div>
+        </div>
+        </template>
+
+</template>
