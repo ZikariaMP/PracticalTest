@@ -1,7 +1,16 @@
 public with sharing class CreateFlightController {
     public CreateFlightController() {
     }
-
+    
+    /*
+    *********************************************************
+    @Method Name    : getAirportsDistance
+    @author         : Zikaria Muahmmad
+    @description    : Method is used to retrive the Airports from the database and calculate the distance between them.
+    @param          : List<id> airportsIds
+    @return         : Decimal distanceInKM
+    ********************************************************
+    */   
     @AuraEnabled(cacheable=true)
     public static Decimal getAirportsDistance(List<id> airportsIds) {
         Decimal distanceInKM = 0;
@@ -14,7 +23,15 @@ public with sharing class CreateFlightController {
         return distanceInKM;
     }
 
-    //Method to insert the flight record
+    /*
+    *********************************************************
+    @Method Name    : insertFlight
+    @author         : Zikaria Muahmmad
+    @description    : Method to insert the flight record.
+    @param          : Case flight
+    @return         : Case flight
+    ********************************************************
+    */ 
     @AuraEnabled
     public static Case insertFlight(Case flight){
         try {
@@ -26,6 +43,15 @@ public with sharing class CreateFlightController {
         }
     }
 
+     /*
+    *********************************************************
+    @Method Name    : calculateDistance
+    @author         : Novular
+    @description    : Method to Calculate the distance between the airports.
+    @param          : Decimal latitude1, Decimal longitude1, Decimal latitude2, Decimal longitude2
+    @return         : Decimal distance
+    ********************************************************
+    */ 
     private static Decimal calculateDistance(Decimal latitude1, Decimal longitude1,
         Decimal latitude2, Decimal longitude2) {
         Integer earthRadius = 6371 * 1000; // in meters
