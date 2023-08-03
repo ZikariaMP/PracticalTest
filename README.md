@@ -1,18 +1,10 @@
-# Salesforce DX Project: Next Steps
+Objects:
+Account gets transformed into Airports: Using the "Rename Tabs and Labels" rename the Account to Airport, for the IATA code I renamed the "Account Name" to "IATA Code" and on the field created a Validation that only allows to have 3CHAR lenght of the field. For longitude and Latitude fields rename the "Billing Latitude" to "Latitude" and lastly "Billing Longitude" to "Longitude".
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+The Case object gets transformed into the Flight object.
+	
+To relate the corresponding departure and arrival airport we will create two custom lookup fields related to Account (Airport) required. Lastly, for the flight distance, we will create a custom object of decimal type.
 
-## How Do You Plan to Deploy Your Changes?
-
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Conditions:
+All the airports have to be created or edited at least once since the Location that contains the longitude and latitude is a required field that has to be filled.
+Flights are created and it information shows only on successful insertions of the record.
