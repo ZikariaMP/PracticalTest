@@ -3,7 +3,7 @@ Account gets transformed into Airports: Using the "Rename Tabs and Labels" renam
 
 The Case object gets transformed into the Flight object.
 	
-To relate the corresponding departure and arrival airport we will create two custom lookup fields related to Account (Airport) required. Lastly, for the flight distance, we will create a custom object of decimal type.
+To relate the corresponding departure and arrival airport we will create two custom lookup fields related to Account (Airport) that are required. Lastly, for the flight distance, we will create a custom object of decimal type.
 
 Conditions:
 All the airports have to be created or edited at least once since the Location that contains the longitude and latitude is a required field that has to be filled.
