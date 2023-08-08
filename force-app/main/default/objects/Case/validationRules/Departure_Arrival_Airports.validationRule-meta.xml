@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Departure_Arrival_Airports</fullName>
+    <active>true</active>
+    <errorConditionFormula>Arrival_Airport__c  =  Departure_Airport__c</errorConditionFormula>
+    <errorMessage>Departure&amp;Arrival Airports can&apos;t be the same.</errorMessage>
+</ValidationRule>
