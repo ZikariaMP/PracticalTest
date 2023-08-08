@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0057R00000Cl7zxQAB",
+      "createdByName": "zikaria Muhammad",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "objectTranslations/Account-en_US.objectTranslation",
+      "fullName": "Account-en_US",
+      "id": "",
+      "lastModifiedById": "0057R00000Cl7zxQAB",
+      "lastModifiedByName": "zikaria Muhammad",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "namespacePrefix": "",
+      "type": "CustomObjectTranslation"
+    },
+    {
+      "createdById": "0057R00000Cl7zxQAB",
+      "createdByName": "zikaria Muhammad",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "objectTranslations/Case-en_US.objectTranslation",
+      "fullName": "Case-en_US",
+      "id": "",
+      "lastModifiedById": "0057R00000Cl7zxQAB",
+      "lastModifiedByName": "zikaria Muhammad",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "namespacePrefix": "",
+      "type": "CustomObjectTranslation"
+    }
+  ]
+}
